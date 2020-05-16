@@ -2,6 +2,7 @@
 import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
+import 'package:flutterwebresume/utils/constants.dart';
 import 'package:flutterwebresume/widgets/text_widget.dart';
 import 'package:parallax_image/parallax_image.dart';
 
@@ -22,9 +23,10 @@ class MyInfoView extends StatelessWidget {
                 height: 600.0,
                 width: double.infinity,
                 child: ParallaxImage(
-                    controller: controller,
-                    image: AssetImage('assets/images/banner1.jpg'),
-                    extent: 100.0),
+                  controller: controller,
+                  image: AssetImage('assets/images/banner_0.webp'),
+                  extent: 100.0,
+                ),
               ),
               Positioned(
                 bottom: 0.0,
@@ -150,13 +152,13 @@ class MyInfoView extends StatelessWidget {
             children: <Widget>[
               Container(
                 width: 1000.0,
-                height: 100.0,
-                color: Color(0xff182153),
+                height: 70.0,
+                color: Color(darkBlueColor),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     IconButton(
-                      icon: Image.asset('assets/icons/lnk.png'),
+                      icon: Image.asset('assets/icons/linkedin.webp'),
                       onPressed: () {
                         js.context.callMethod("open", [
                           "https://www.linkedin.com/in/juned-siddiqui-0b4a45a3/"
@@ -168,7 +170,7 @@ class MyInfoView extends StatelessWidget {
                       width: 20.0,
                     ),
                     IconButton(
-                      icon: Image.asset('assets/icons/fb.png'),
+                      icon: Image.asset('assets/icons/facebook.webp'),
                       onPressed: () {
                         js.context.callMethod("open",
                             ["https://www.facebook.com/juned.siddiqui.39/"]);
@@ -179,7 +181,7 @@ class MyInfoView extends StatelessWidget {
                       width: 20.0,
                     ),
                     IconButton(
-                      icon: Image.asset('assets/icons/ins.png'),
+                      icon: Image.asset('assets/icons/instagram.webp'),
                       onPressed: () {
                         js.context.callMethod("open",
                             ["https://www.instagram.com/sid_junaid77/"]);
@@ -198,9 +200,10 @@ class MyInfoView extends StatelessWidget {
               Container(
                 width: 600.0,
                 child: TextWidget(
+                    textAlign: TextAlign.center,
                     textSize: 18.0,
                     text:
-                        'I\'m a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.'),
+                        'Experienced mobile app developer who has a track record of success creating apps that are both well-received and commercially viable. Skilled with working as a team and incorporating input into projects. Ability to always look for ways to improve upon an already existing app to keep people downloading it and enjoying it. Strong eye for detail and tenacity to never quit on something until it is absolutely perfect.'),
               )
             ],
           ),
